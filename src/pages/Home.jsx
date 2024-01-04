@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { searchForShows } from '../api/tvMaze';
-import { searchForActors } from '../api/tvMaze';
+import { searchForShows } from '../api/TvMaze';
+import { searchForActors } from '../api/TvMaze';
 
 const Home = () => {
   const [searchStr, setSearchStr] = useState('');
