@@ -23,7 +23,6 @@ const Home = () => {
     setFilter({ q, searchOption });
   };
 
- 
   const renderApiData = () => {
     if (apiData) {
       return apiData[0]?.show ? (
