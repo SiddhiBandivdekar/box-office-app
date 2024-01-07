@@ -8,6 +8,7 @@ import { useQuery } from 'react-query';
 
 const Home = () => {
   const [filter, setFilter] = useState(null);
+
   const { data: apiData, error: apiError } = useQuery({
     queryKey: ['search', filter],
     queryFn: () =>
@@ -17,10 +18,12 @@ const Home = () => {
     enabled: !!filter,
     refetchOnWindowFocus: false,
   });
+
   const onSearch = async ({ q, searchOption }) => {
-    setFilter(q, searchOption);
+    setFilter({ q, searchOption });
   };
 
+ 
   const renderApiData = () => {
     if (apiData) {
       return apiData[0]?.show ? (
