@@ -1,8 +1,10 @@
 {
   "name": "box-office",
   "version": "0.1.0",
+  "homepage": "https://SiddhiBandivdekar.github.io/box-office-app",
   "private": true,
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
@@ -12,6 +14,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
