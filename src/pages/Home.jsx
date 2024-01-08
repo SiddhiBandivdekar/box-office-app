@@ -5,6 +5,7 @@ import SearchForm from '../components/SearchForm';
 import ShowGrid from '../components/shows/ShowGrid';
 import ActorsGrid from '../components/actors/ActorsGrid';
 import { useQuery } from 'react-query';
+import styled from 'styled-components';
 
 const Home = () => {
   const [filter, setFilter] = useState(null);
