@@ -6,6 +6,7 @@ import ShowGrid from '../components/shows/ShowGrid';
 import ActorsGrid from '../components/actors/ActorsGrid';
 import { useQuery } from 'react-query';
 import styled from 'styled-components';
+import { TextCenter } from '../components/common/TextCenter';
 
 const Home = () => {
   const [filter, setFilter] = useState(null);
@@ -34,10 +35,10 @@ const Home = () => {
     }
 
     if (apiData?.length === 0) {
-      return <div>No results</div>;
+      return <TextCenter>No results</TextCenter>;
     }
     if (apiError) {
-      return <div>Error occured: {apiError.message}</div>;
+      return <TextCenter>Error occured: {apiError.message}</TextCenter>;
     }
 
     return null;
