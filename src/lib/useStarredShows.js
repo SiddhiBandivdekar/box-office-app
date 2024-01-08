@@ -14,6 +14,8 @@ const usePersistedReducer = (reducer, initialState, localStorageKey) => {
   return [state, dispatch];
 };
 
+
+
 const starredReducer = (currentStarred, action) => {
   switch (action.type) {
     case 'STAR':
